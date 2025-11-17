@@ -19,11 +19,9 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun InputNotaAluno(notas: MutableList<Double>, onNotaChange: (Int, Double) -> Unit) {
     Column(modifier = Modifier.fillMaxWidth()) {
-        Text("Lançamento de Notas", fontWeight = FontWeight.Bold, fontSize = 18.sp)
-        Spacer(modifier = Modifier.height(10.dp))
-
+        Text("Lançamento de notas:", fontWeight = FontWeight.Medium, fontSize = 18.sp)
         notas.forEachIndexed { index, nota ->
-            val nomeNota = "TP${index + 1}"
+            val nomeNota = "${index + 1}º nota"
 
             OutlinedTextField(
                 value = if (nota == 0.0 && notas.size == 3) "" else nota.toString(),

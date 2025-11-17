@@ -33,7 +33,6 @@ fun ResultadoNota(aluno: Aluno) {
                 fontWeight = FontWeight.Bold,
                 fontSize = 20.sp
             )
-            Spacer(modifier = Modifier.height(10.dp))
 
             Text("TP1: ${aluno.notas.getOrElse(0) { 0.0 }}")
             Text("TP2: ${aluno.notas.getOrElse(1) { 0.0 }}")
@@ -48,16 +47,14 @@ fun ResultadoNota(aluno: Aluno) {
                 color = MaterialTheme.colorScheme.primary
             )
 
-            Spacer(modifier = Modifier.height(15.dp))
-
             Text(
                 text = "Status Final: $status",
-                fontSize = 22.sp,
+                fontSize = 18.sp,
                 fontWeight = FontWeight.ExtraBold,
                 color = when (status) {
-                    "Reprovado" -> Color.Red
-                    "Ótimo Aproveitamento" -> Color(0xFF00C853)
-                    else -> Color(0xFF00B0FF)
+                    "Reprovado" -> Color.Black
+                    "Ótimo Aproveitamento" -> Color.Black
+                    else -> Color.Black
                 }
             )
         }

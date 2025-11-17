@@ -34,7 +34,7 @@ fun NotaScreen() {
 
     var nomeInput by remember { mutableStateOf(aluno.nomeAluno) }
 
-    Scaffold(topBar = { TopAppBar(title = { Text("📝 Gestão de Notas") }) }) { paddingValues ->
+    Scaffold(topBar = { TopAppBar(title = { Text("Média Geral") }) }) { paddingValues ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
